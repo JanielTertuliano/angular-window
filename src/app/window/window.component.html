@@ -1,3 +1,27 @@
-<p>
-  window works!
-</p>
+<div id="draggable" class="ui-widget-content" style="width: 500px; height: 500px;" *ngIf="!miniSize">
+
+  <div class="top">
+    <div class="dot close">
+      <span class="ui-icon ui-icon-close" (click)="closeWindow()"></span>
+    </div>
+    <div class="dot resizable" (click)="maximize()" *ngIf="!maximumSize">
+      <span class="ui-icon ui-icon-extlink"></span>
+    </div>
+    <div class="dot resizable" (click)="resizable()" *ngIf="maximumSize">
+      <span class="ui-icon ui-icon-newwin"></span>
+    </div>
+    <div class="dot minimize" (click)="minimize()">
+      <span class="ui-icon ui-icon-minus"></span>
+    </div>
+  </div>
+
+  <div class="content">
+    <h3>Browser Window</h3>
+    <p>How to create a browser window look with CSS.</p>
+    <input type="text" [(ngModel)]="valor"/>
+  </div>
+</div>
+
+<div *ngIf="miniSize" class="minimized" (click)="undoMinimize()">
+  Minimizado
+</div>

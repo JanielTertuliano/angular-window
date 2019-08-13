@@ -20,7 +20,11 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@types/jqueryui": "^1.12.7",
     "core-js": "^2.5.4",
+    "jquery": "^3.4.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
