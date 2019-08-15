@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-window';
-  array = [
+  arrayWindow = [
     { title: 'TITULO 1', idElement: 'draggable' },
     { title: 'TITULO 2', idElement: 'draggable_2' },
     { title: 'TITULO 3', idElement: 'draggable_3' }

@@ -1,6 +1,5 @@
-<section id="{{idElement}}" class="ui-widget-content"
-style="width: 500px; height: 500px;"
-*ngIf="!miniSize">
+<section id="{{idElement}}" *ngIf="!miniSize" class="ui-widget-content"
+style="width: 500px; height: 500px;" (click)="clickWindow()">
 
   <div class="top">
     <div class="dot close">

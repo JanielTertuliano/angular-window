@@ -24,15 +24,25 @@ export class WindowComponent implements OnInit {
 
   initWindow() {
     $(() => {
-      $('#' + this.idElement).draggable();
-    });
+      $('#' + this.idElement).draggable({
+        start: (e, ui) => {
+          $('.ui-draggable').not(ui.helper.css('z-index', '1'))
+            .css('z-index', '0');
+        }
+      });
 
-    $(() => {
       $('#' + this.idElement).resizable({
         minHeight: 200,
         minWidth: 200,
       });
+
+      $('.ui-icon-gripsmall-diagonal-se').attr('style', 'z-index: 0');
     });
+  }
+
+  clickWindow() {
+    $('.ui-draggable').not($('#' + this.idElement).css('z-index', '1'))
+    .css('z-index', '0');
   }
 
   maximize() {
