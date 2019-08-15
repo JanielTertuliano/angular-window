@@ -63,6 +63,14 @@ body {
   padding: 10px;
 }
 
+.maximized-fixed-container {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
 .maximized {
   position: absolute !important;
   top: 0 !important;

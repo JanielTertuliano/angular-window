@@ -6,13 +6,15 @@ import { routingComponents, AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WindowComponent } from './window/window.component';
 import { TelaComponent } from './tela/tela.component';
+import { MenuComponent } from './layout/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WindowComponent,
     routingComponents,
-    TelaComponent
+    TelaComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
