@@ -10,6 +10,7 @@ export class WindowComponent implements OnInit {
 
   @Input() title: string;
   @Input() idElement: string;
+  @Input() index: number;
 
   maximumSize: boolean;
   miniSize: boolean;
@@ -61,6 +62,7 @@ export class WindowComponent implements OnInit {
 
   minimize() {
     this.miniSize = true;
+    // $('.minimized').attr('style', `left: ${10 * this.index}%`);
     $('#' + this.idElement).draggable('disable');
     $('#' + this.idElement).resizable('disable');
   }

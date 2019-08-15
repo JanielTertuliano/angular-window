@@ -1,5 +1,5 @@
-<section id="{{idElement}}" *ngIf="!miniSize" class="ui-widget-content"
-style="width: 500px; height: 500px;" (click)="clickWindow()">
+<section id="{{idElement}}" *ngIf="!miniSize" class="ui-widget-content" style="width: 500px; height: 500px;"
+  (click)="clickWindow()">
 
   <div class="top">
     <div class="dot close">
@@ -23,5 +23,7 @@ style="width: 500px; height: 500px;" (click)="clickWindow()">
 </section>
 
 <div *ngIf="miniSize" class="minimized" (click)="undoMinimize()">
-  {{ title }}
+  <div>
+    {{ title }}
+  </div>
 </div>
