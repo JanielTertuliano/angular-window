@@ -1,3 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-window></app-window>
+<div *ngFor="let item of array" >
+
+  <app-window [title]="item.title" [idElement]="item.idElement"></app-window>
+
+</div>
+
+<button>
+  Abrir Window
+</button>

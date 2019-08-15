@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 declare let $: any;
 
 @Component({
@@ -8,12 +8,15 @@ declare let $: any;
 })
 export class WindowComponent implements OnInit {
 
-  idElement: string = '#draggable';
+  @Input() title: string;
+  @Input() idElement: string;
+
   maximumSize: boolean;
   miniSize: boolean;
-  valor: any;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
     this.initWindow();
@@ -21,11 +24,11 @@ export class WindowComponent implements OnInit {
 
   initWindow() {
     $(() => {
-      $(this.idElement).draggable();
+      $('#' + this.idElement).draggable();
     });
 
     $(() => {
-      $(this.idElement).resizable({
+      $('#' + this.idElement).resizable({
         minHeight: 200,
         minWidth: 200,
       });
@@ -34,22 +37,22 @@ export class WindowComponent implements OnInit {
 
   maximize() {
     this.maximumSize = true;
-    $(this.idElement).addClass('maximized');
-    $(this.idElement).draggable('disable');
-    $(this.idElement).resizable('disable');
+    $('#' + this.idElement).addClass('maximized');
+    $('#' + this.idElement).draggable('disable');
+    $('#' + this.idElement).resizable('disable');
   }
 
   resizable() {
     this.maximumSize = false;
-    $(this.idElement).removeClass('maximized');
-    $(this.idElement).draggable('enable');
-    $(this.idElement).resizable('enable');
+    $('#' + this.idElement).removeClass('maximized');
+    $('#' + this.idElement).draggable('enable');
+    $('#' + this.idElement).resizable('enable');
   }
 
   minimize() {
     this.miniSize = true;
-    $(this.idElement).draggable('disable');
-    $(this.idElement).resizable('disable');
+    $('#' + this.idElement).draggable('disable');
+    $('#' + this.idElement).resizable('disable');
   }
 
   undoMinimize() {
@@ -58,7 +61,7 @@ export class WindowComponent implements OnInit {
   }
 
   closeWindow() {
-    $(this.idElement).remove();
+    $('#' + this.idElement).remove();
   }
 
 }

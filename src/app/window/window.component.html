@@ -1,4 +1,6 @@
-<div id="draggable" class="ui-widget-content" style="width: 500px; height: 500px;" *ngIf="!miniSize">
+<section id="{{idElement}}" class="ui-widget-content"
+style="width: 500px; height: 500px;"
+*ngIf="!miniSize">
 
   <div class="top">
     <div class="dot close">
@@ -13,15 +15,14 @@
     <div class="dot minimize" (click)="minimize()">
       <span class="ui-icon ui-icon-minus"></span>
     </div>
+    <div class="title">{{ title }}</div>
   </div>
 
   <div class="content">
-    <h3>Browser Window</h3>
-    <p>How to create a browser window look with CSS.</p>
-    <input type="text" [(ngModel)]="valor"/>
+    <app-tela></app-tela>
   </div>
-</div>
+</section>
 
 <div *ngIf="miniSize" class="minimized" (click)="undoMinimize()">
-  Minimizado
+  {{ title }}
 </div>
