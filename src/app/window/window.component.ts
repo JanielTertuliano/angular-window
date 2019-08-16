@@ -10,10 +10,9 @@ export class WindowComponent implements OnInit {
 
   @Input() title: string;
   @Input() idElement: string;
-  @Input() index: number;
+  // @Input() index: number;
 
   maximumSize: boolean;
-  miniSize: boolean;
 
   constructor() {
 
@@ -43,7 +42,7 @@ export class WindowComponent implements OnInit {
 
   clickWindow() {
     $('.ui-draggable').not($('#' + this.idElement).css('z-index', '1'))
-    .css('z-index', '0');
+      .css('z-index', '0');
   }
 
   maximize() {
@@ -61,15 +60,17 @@ export class WindowComponent implements OnInit {
   }
 
   minimize() {
-    this.miniSize = true;
-    // $('.minimized').attr('style', `left: ${10 * this.index}%`);
-    $('#' + this.idElement).draggable('disable');
-    $('#' + this.idElement).resizable('disable');
+    $('#' + this.idElement).effect('drop', { direction: 'down' }, 'fast');
+    const container = $('.minimized-container');
+    const element = $('#min-' + this.idElement);
+    element.removeAttr('style');
+    container.append(element);
   }
 
   undoMinimize() {
-    this.miniSize = false;
-    this.initWindow();
+    $('#' + this.idElement).show().effect('slide', { direction: 'down' }, 'fast');
+    const element = $('#min-' + this.idElement);
+    element.attr('style', 'display: none');
   }
 
   closeWindow() {

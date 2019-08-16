@@ -1,11 +1,17 @@
 <app-menu></app-menu>
 
-<div *ngFor="let item of arrayWindow" >
+<div *ngFor="let item of arrayWindow">
 
-  <app-window [title]="item.title" [idElement]="item.idElement" [index]="item.index"></app-window>
+  <app-window [title]="item.title" [idElement]="item.idElement"></app-window>
 
 </div>
 
-<button>
+<button (click)="newWindow()">
   Abrir Window
 </button>
+
+<div class="minimized-fixed-container">
+  <div class="minimized-container">
+    <!-- Minimized Window -->
+  </div>
+</div>
