@@ -1,17 +1,4 @@
-.minimized-fixed-container {
-  bottom: 0;
-  left: 0;
-  position: fixed;
+.main {
   width: 100%;
-  z-index: 9999;
-}
-
-.minimized-container {
-  display: flex;
-  height: auto !important;
-  left: auto !important;
-  opacity: 1;
-  position: relative !important;
-  top: auto !important;
-  width: auto !important;
+  height: 100%;
 }

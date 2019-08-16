@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 declare let $: any;
 
 @Component({
@@ -14,7 +15,7 @@ export class WindowComponent implements OnInit {
 
   maximumSize: boolean;
 
-  constructor() {
+  constructor(public home: HomeComponent) {
 
   }
 
@@ -61,7 +62,7 @@ export class WindowComponent implements OnInit {
 
   minimize() {
     $('#' + this.idElement).effect('drop', { direction: 'down' }, 'fast');
-    const container = $('.minimized-container');
+    const container = $('.osx-dock');
     const element = $('#min-' + this.idElement);
     element.removeAttr('style');
     container.append(element);
@@ -75,6 +76,7 @@ export class WindowComponent implements OnInit {
 
   closeWindow() {
     $('#' + this.idElement).remove();
+    this.home.removeWindow(this.idElement);
   }
 
 }

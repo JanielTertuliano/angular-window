@@ -28,4 +28,13 @@ export class HomeComponent implements OnInit {
     this.arrayWindow.push({ title: 'TITULO ' + index, idElement: 'draggable_' + index });
   }
 
+  removeWindow(idElement: any) {
+    for (let i = 0; i < this.arrayWindow.length; i++) {
+      if (this.arrayWindow[i].idElement === idElement) {
+        this.arrayWindow.splice(i, 1);
+        break;
+      }
+    }
+  }
+
 }

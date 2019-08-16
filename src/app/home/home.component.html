@@ -1,6 +1,6 @@
-<app-menu></app-menu>
+<!-- <app-menu></app-menu> -->
 
-<div *ngFor="let item of arrayWindow">
+<div class="main" *ngFor="let item of arrayWindow">
 
   <app-window [title]="item.title" [idElement]="item.idElement"></app-window>
 
@@ -10,8 +10,11 @@
   Abrir Window
 </button>
 
-<div class="minimized-fixed-container">
-  <div class="minimized-container">
-    <!-- Minimized Window -->
+<div id="dockContainer">
+  <div id="dockWrapper">
+    <div class="cap left"></div>
+    <ul class="osx-dock">
+      <!--  -->
+    </ul>
   </div>
 </div>
