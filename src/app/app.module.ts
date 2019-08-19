@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { WindowComponent } from './window/window.component';
 import { TelaComponent } from './tela/tela.component';
 import { MenuComponent } from './layout/menu/menu.component';
+import { Tela2Component } from './tela2/tela2.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +15,21 @@ import { MenuComponent } from './layout/menu/menu.component';
     WindowComponent,
     routingComponents,
     TelaComponent,
-    MenuComponent
+    MenuComponent,
+    Tela2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
+  ],
+  entryComponents: [
+    AppComponent,
+    WindowComponent,
+    routingComponents,
+    TelaComponent,
+    MenuComponent,
+    Tela2Component
   ],
   providers: [],
   bootstrap: [AppComponent]

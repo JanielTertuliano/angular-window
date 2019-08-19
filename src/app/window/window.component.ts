@@ -11,7 +11,7 @@ export class WindowComponent implements OnInit {
 
   @Input() title: string;
   @Input() idElement: string;
-  // @Input() index: number;
+  @Input() icon: string;
 
   maximumSize: boolean;
 
@@ -27,8 +27,8 @@ export class WindowComponent implements OnInit {
     $(() => {
       $('#' + this.idElement).draggable({
         start: (e, ui) => {
-          $('.ui-draggable').not(ui.helper.css('z-index', '1'))
-            .css('z-index', '0');
+          $('.ui-draggable').not(ui.helper.css('z-index', '3'))
+            .css('z-index', '2');
         }
       });
 
@@ -42,8 +42,8 @@ export class WindowComponent implements OnInit {
   }
 
   clickWindow() {
-    $('.ui-draggable').not($('#' + this.idElement).css('z-index', '1'))
-      .css('z-index', '0');
+    $('.ui-draggable').not($('#' + this.idElement).css('z-index', '3'))
+      .css('z-index', '2');
   }
 
   maximize() {

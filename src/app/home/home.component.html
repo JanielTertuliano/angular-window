@@ -1,20 +1,41 @@
 <!-- <app-menu></app-menu> -->
 
-<div class="main" *ngFor="let item of arrayWindow">
+<div>
 
-  <app-window [title]="item.title" [idElement]="item.idElement"></app-window>
+  <div class="main" *ngFor="let item of arrayWindow">
 
-</div>
+    <app-window [title]="item.title" [idElement]="item.idElement" [icon]="item.icon">
+      <ng-container *ngComponentOutlet="item.component">
+      </ng-container>
+    </app-window>
 
-<button (click)="newWindow()">
-  Abrir Window
-</button>
-
-<div id="dockContainer" *ngIf="arrayWindow.length != 0">
-  <div id="dockWrapper">
-    <div class="cap left"></div>
-    <ul class="osx-dock">
-      <!--  -->
-    </ul>
   </div>
+
+  <div id="#desktop" style="position: fixed; z-index: 1;">
+
+    <a class="button" (dblclick)="newWindow()">
+      <span>
+        <img src="../../assets/img/Misc-Desktop-Mac-icon.png" />
+      </span>
+      <p>Tela 1</p>
+    </a>
+
+    <a class="button" (dblclick)="newWindowTela2()">
+      <span>
+        <img src="../../assets/img/Folder-Mac-icon.png" />
+      </span>
+      <p>Tela 2</p>
+    </a>
+
+  </div>
+
+  <div id="dockContainer" *ngIf="arrayWindow.length != 0">
+    <div id="dockWrapper">
+      <div class="cap left"></div>
+      <ul class="osx-dock">
+        <!--  -->
+      </ul>
+    </div>
+  </div>
+
 </div>

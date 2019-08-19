@@ -17,11 +17,13 @@
   </div>
 
   <div class="content">
-    <app-tela></app-tela>
+    <!-- <app-tela></app-tela> -->
+    <ng-content></ng-content>
+
   </div>
 </section>
 
 <li id="min-{{idElement}}" class="active" (click)="undoMinimize()" style="display: none;">
   <span> {{ title }}</span>
-  <a href="#"><img src="../../assets/img/Misc-Desktop-Mac-icon.png" /></a>
+  <a href="#"><img src="../../assets/img/{{icon}}" /></a>
 </li>
