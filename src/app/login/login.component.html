@@ -1,0 +1,43 @@
+<div id="pageLogin">
+  <header id="headlogin">
+    <nav id="menu-dx-login">
+      <ul>
+        <li class="wireless"></li>
+        <li class="time">
+          <ul>
+            <li class="hours">{{ hours }}</li>
+            <li class="point">:</li>
+            <li class="min">{{ min }}</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="new-apple-logo"></div>
+
+  <div class="user-avatar">
+    <div id="avatar">
+      <a class="hide" id="hide"></a>
+      <a class="show" id="show"></a>
+      <div id="cover"></div>
+      <div class="ava-css">
+        <img src="../../assets/img/login/Lion.gif">
+      </div>
+      <div class="logName">
+        <p>Janiel Tertuliano</p>
+      </div>
+      <div id="switch">
+        <div class="validate">
+          <form action="#page">
+            <input type="password" id="password" placeholder="Password" (change)="send()">
+            <input type="submit" class="submit" (click)="send()" *ngIf="!loading">
+            <input type="submit" class="charge" *ngIf="loading">
+            <div class="tooltip-pass" style="display: block;" *ngIf="errorMensage">
+              <p>Password: admin</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

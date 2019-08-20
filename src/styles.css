@@ -1,11 +1,15 @@
-html {
-  background: url(assets/img/mojave-night.jpg) no-repeat center center fixed;
+body {
+ background: url(assets/img/mojave-night.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.body_login {
+  background: url(assets/img/login/gradient.png) no-repeat center, url(assets/img/login/background.png) repeat left top #000;
+  opacity: 1;
+}
 /* MAc style dock by fivera.net */
 div.cap {
   display: block;
