@@ -12,6 +12,7 @@ export class WindowComponent implements OnInit {
   @Input() title: string;
   @Input() idElement: string;
   @Input() icon: string;
+  @Input() backgroundContent: string;
 
   maximumSize: boolean;
 
@@ -38,12 +39,19 @@ export class WindowComponent implements OnInit {
       });
 
       $('.ui-icon-gripsmall-diagonal-se').attr('style', 'z-index: 0');
+      this.setBackgroundContent();
     });
   }
 
   clickWindow() {
     $('.ui-draggable').not($('#' + this.idElement).css('z-index', '3'))
       .css('z-index', '2');
+  }
+
+  setBackgroundContent() {
+    const el = document.getElementById(this.idElement);
+    el.getElementsByClassName('ui-widget-content');
+    el.style.backgroundColor = this.backgroundContent;
   }
 
   maximize() {

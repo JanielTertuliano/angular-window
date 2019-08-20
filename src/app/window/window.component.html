@@ -2,16 +2,16 @@
 
    <div class="top">
     <div class="dot close" (click)="closeWindow()">
-      <span class="ui-icon ui-icon-close"></span>
+      <i class="ui-icon ui-icon-close"></i>
     </div>
     <div class="dot resizable" (click)="maximize()" *ngIf="!maximumSize">
-      <span class="ui-icon ui-icon-extlink"></span>
+      <i class="ui-icon ui-icon-extlink"></i>
     </div>
     <div class="dot resizable" (click)="resizable()" *ngIf="maximumSize">
-      <span class="ui-icon ui-icon-newwin"></span>
+      <i class="ui-icon ui-icon-newwin"></i>
     </div>
     <div class="dot minimize" (click)="minimize()">
-      <span class="ui-icon ui-icon-minus"></span>
+      <i class="ui-icon ui-icon-minus"></i>
     </div>
     <div class="title">{{ title }}</div>
   </div>

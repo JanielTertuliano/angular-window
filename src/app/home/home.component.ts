@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
       title: 'TITULO ' + index,
       idElement: 'draggable_' + index,
       icon: 'Misc-Desktop-Mac-icon.png',
+      backgroundContent: '#3d4248',
       component: TelaComponent
     });
   }
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
       title: 'TITULO ' + index,
       idElement: 'draggable_' + index,
       icon: 'Folder-Mac-icon.png',
+      backgroundContent: '#fdfdfd',
       component: Tela2Component
     });
   }

@@ -4,7 +4,8 @@
 
   <div class="main" *ngFor="let item of arrayWindow">
 
-    <app-window [title]="item.title" [idElement]="item.idElement" [icon]="item.icon">
+    <app-window [title]="item.title" [idElement]="item.idElement" [icon]="item.icon"
+      [backgroundContent]="item.backgroundContent">
       <ng-container *ngComponentOutlet="item.component">
       </ng-container>
     </app-window>

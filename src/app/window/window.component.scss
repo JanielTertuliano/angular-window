@@ -11,31 +11,29 @@ section {
 }
 
 .ui-widget-content {
-  background: #cccccc;
+  background: #3d4248;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: fixed;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  border: 1px solid #adadad;
+  border: 1px solid #2a2d30;
   margin: 0 auto;
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
 }
 
 .top {
-  background: #e0e0e0;
-  border: 1px solid white;
-  border-left-color: #f3f3f3;
-  border-right-color: #f3f3f3;
-  border-bottom-color: #bdbdbd;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  background: #38393c;
+  border: 1px solid #2a2d30;
+  // border-top-left-radius: 6px;
+  // border-top-right-radius: 6px;
   // text-align: center;
-  color: #505151;
+  color: #fdfdfd;
   font-size: 12px;
   font-weight: bold;
   line-height: 20px;
   vertical-align: middle;
-  height: 30px;
+  height: 45px;
+  padding: 8px;
 }
 
 .title {
@@ -54,19 +52,19 @@ section {
   margin: 5px;
 }
 
-.dot span {
+.dot i {
   display: none;
   margin-bottom: 5px;
   right: 0.6px;
-  font-size: 1px;
+  font-size: 5px;
 }
 
 .dot:hover {
-  -webkit-transform-origin: center bottom;
-  -moz-transform-origin: center bottom;
-  -o-transform-origin: center bottom;
-  -ms-transform-origin: center bottom;
-  transform-origin: center bottom;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -o-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -74,20 +72,23 @@ section {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 
-  span {
+  i {
     display: block;
   }
 }
 .close {
-  background: radial-gradient(14px at 7px 50%, #ff5e57 0px, #ff635a 5px, #fd5249 6px, rgba(255, 255, 255, 0) 7px);
+  background: #f25056;
+  // background: radial-gradient(14px at 7px 50%, #ff5e57 0px, #ff635a 5px, #fd5249 6px, rgba(255, 255, 255, 0) 7px);
 }
 
 .resizable {
-  background: radial-gradient(14px at 7px 50%, #ffbd2e 0px, #ffc42f 5px, #fcb91b 6px, rgba(255, 255, 255, 0) 7px);
+  background: #fac536;
+  // background: radial-gradient(14px at 7px 50%, #ffbd2e 0px, #ffc42f 5px, #fcb91b 6px, rgba(255, 255, 255, 0) 7px);
 }
 
 .minimize {
-  background: radial-gradient(14px at 7px 50%, #5ac05a 0px, #58c258 5px, #56c260 6px, rgba(255, 255, 255, 0) 7px);
+  background: #39ea49;
+  // background: radial-gradient(14px at 7px 50%, #5ac05a 0px, #58c258 5px, #56c260 6px, rgba(255, 255, 255, 0) 7px);
 }
 
 .content {
