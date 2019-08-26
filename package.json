@@ -8,8 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-prod": "npm run build && server.js",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -24,16 +23,18 @@
     "@angular/router": "^6.1.0",
     "@types/jqueryui": "^1.12.7",
     "core-js": "^2.5.4",
+    "express": "^4.17.1",
     "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
+    "path": "^0.12.7",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
-    "@angular/cli": "~6.2.4",
-    "@angular/compiler-cli": "^6.1.0",
+    "@angular/cli": "^8.3.0",
+    "@angular/compiler-cli": "^6.1.10",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -53,7 +54,7 @@
     "typescript": "~2.9.2"
   },
   "engines": {
-    "node": "10.15.3",
+    "node": "8.12.0",
     "npm": "6.4.1"
   }
 }
