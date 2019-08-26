@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "preinstall": "npm install -g node-gyp",
+    "heroku-postbuild": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +33,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular-devkit/build-angular": "^0.8.9",
     "@angular/cli": "^8.3.0",
     "@angular/compiler-cli": "^6.1.10",
     "@angular/language-service": "^6.1.0",
