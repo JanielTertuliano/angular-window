@@ -8,6 +8,8 @@ import { WindowComponent } from './window/window.component';
 import { TelaComponent } from './tela/tela.component';
 import { MenuComponent } from './layout/menu/menu.component';
 import { Tela2Component } from './tela2/tela2.component';
+import { GoogleMapsComponent } from './google-maps/google-maps.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,16 @@ import { Tela2Component } from './tela2/tela2.component';
     routingComponents,
     TelaComponent,
     MenuComponent,
-    Tela2Component
+    Tela2Component,
+    GoogleMapsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'CHAVES_GOOGLE_MAPS'
+    })
   ],
   entryComponents: [
     AppComponent,
@@ -29,7 +35,8 @@ import { Tela2Component } from './tela2/tela2.component';
     routingComponents,
     TelaComponent,
     MenuComponent,
-    Tela2Component
+    Tela2Component,
+    GoogleMapsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

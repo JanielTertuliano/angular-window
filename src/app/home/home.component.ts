@@ -1,3 +1,4 @@
+import { GoogleMapsComponent } from './../google-maps/google-maps.component';
 import { TelaComponent } from './../tela/tela.component';
 import { Component, OnInit } from '@angular/core';
 import { Tela2Component } from '../tela2/tela2.component';
@@ -39,6 +40,17 @@ export class HomeComponent implements OnInit {
       icon: 'Folder-Mac-icon.png',
       backgroundContent: '#fdfdfd',
       component: Tela2Component
+    });
+  }
+
+  openGoogleMaps() {
+    const index = this.arrayWindow.length + 1;
+    this.arrayWindow.push({
+      title: 'Google Maps',
+      idElement: 'draggable_' + index,
+      icon: 'google-maps.png',
+      backgroundContent: '#fdfdfd',
+      component: GoogleMapsComponent
     });
   }
 
