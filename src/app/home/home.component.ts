@@ -1,7 +1,7 @@
-import { GoogleMapsComponent } from './../google-maps/google-maps.component';
 import { TelaComponent } from './../tela/tela.component';
 import { Component, OnInit } from '@angular/core';
 import { Tela2Component } from '../tela2/tela2.component';
+import { LeafletMapsComponent } from '../leaflet-maps/leaflet-maps.component';
 declare let $: any;
 
 @Component({
@@ -43,14 +43,14 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  openGoogleMaps() {
+  openMaps() {
     const index = this.arrayWindow.length + 1;
     this.arrayWindow.push({
-      title: 'Google Maps',
+      title: 'Maps',
       idElement: 'draggable_' + index,
-      icon: 'google-maps.png',
+      icon: 'map.png',
       backgroundContent: '#fdfdfd',
-      component: GoogleMapsComponent
+      component: LeafletMapsComponent
     });
   }
 
