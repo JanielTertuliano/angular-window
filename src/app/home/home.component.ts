@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
       idElement: 'draggable_' + index,
       icon: 'Misc-Desktop-Mac-icon.png',
       backgroundContent: '#3d4248',
-      component: TelaComponent
+      component: TelaComponent,
+      openMaxmize: false
     });
   }
 
@@ -39,7 +40,8 @@ export class HomeComponent implements OnInit {
       idElement: 'draggable_' + index,
       icon: 'Folder-Mac-icon.png',
       backgroundContent: '#fdfdfd',
-      component: Tela2Component
+      component: Tela2Component,
+      openMaxmize: false
     });
   }
 
@@ -50,7 +52,8 @@ export class HomeComponent implements OnInit {
       idElement: 'draggable_' + index,
       icon: 'map.png',
       backgroundContent: '#fdfdfd',
-      component: LeafletMapsComponent
+      component: LeafletMapsComponent,
+      openMaxmize: true
     });
   }
 

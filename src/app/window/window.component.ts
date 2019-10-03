@@ -13,6 +13,7 @@ export class WindowComponent implements OnInit {
   @Input() idElement: string;
   @Input() icon: string;
   @Input() backgroundContent: string;
+  @Input() openMaxmize: boolean;
 
   maximumSize: boolean;
 
@@ -41,6 +42,12 @@ export class WindowComponent implements OnInit {
       $('.ui-icon-gripsmall-diagonal-se').attr('style', 'z-index: 0');
       this.setBackgroundContent();
     });
+
+    if (this.openMaxmize) {
+      setTimeout(() => {
+        this.maximize();
+      }, 10);
+    }
   }
 
   clickWindow() {
